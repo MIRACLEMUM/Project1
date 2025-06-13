@@ -14,10 +14,15 @@ function App() {
         isDarkMode ? "bg-[#0c1b1e] text-white" : "bg-white text-black"
       }`}
     >
-      <Header />
-      <SportTabs />
-      <FilterBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
-      <MatchList />
+      {/* Responsive content wrapper */}
+      <div className="max-w-screen-lg mx-auto px-4 sm:px-6 lg:px-8">
+        <Header />
+        <SportTabs />
+        <FilterBar isDarkMode={isDarkMode} setIsDarkMode={setIsDarkMode} />
+        <MatchList />
+      </div>
+
+      {/* Bottom navigation (stays at the bottom) */}
       <BottomNav />
     </div>
   );
